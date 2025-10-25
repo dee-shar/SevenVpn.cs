@@ -5,7 +5,6 @@ Mobile-API for [7 VPN](https://play.google.com/store/apps/details?id=com.sevenvp
 ```cs
 using System;
 using SevenVpnApi;
-using System.Threading.Tasks;
 
 namespace Application
 {
