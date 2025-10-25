@@ -1,8 +1,22 @@
-# 7_vpn.sh
+# SevenVpn.cs
 Mobile-API for [7 VPN](https://play.google.com/store/apps/details?id=com.sevenvpn) which is an reliable and easy-to-use VPN application that designed to ensure your security and privacy online anywhere and anytime
 
 ## Example
-```bash
-source ./7_vpn.sh
-login "login" "password"
+```cs
+using System;
+using SevenVpnApi;
+using System.Threading.Tasks;
+
+namespace Application
+{
+    internal class Program
+    {
+        static async Task Main()
+        {
+            var api = new SevenVpn();
+            string servers = await api.GetServers();
+            Console.WriteLine(servers);
+        }
+    }
+}
 ```
