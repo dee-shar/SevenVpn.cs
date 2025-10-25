@@ -1,5 +1,6 @@
 using System;
 using System.Text;
+using System.Text.Json;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Net.Http.Headers;
@@ -27,7 +28,6 @@ namespace SevenVpnApi
         {
             var data = JsonContent.Create(new { login = login, email = login, password = password });
             var response = await httpClient.PostAsync($"{apiUrl}/user/registration", data);
-            response.EnsureSuccessStatusCode();
             return await response.Content.ReadAsStringAsync();
         }
 
