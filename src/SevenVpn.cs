@@ -13,6 +13,7 @@ namespace SevenVpnApi
         private readonly string staticApiUrl = "https://static.7vpn.com";
         private string userId;
         private string securityIdentifier;
+        
         public SevenVpn()
         {
             httpClient = new HttpClient();
